@@ -1,0 +1,90 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Office UI Fabric, visit https://developer.microsoft.com/fabric. -->
+    <link rel="stylesheet"
+        href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css" />
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <main class="ms-welcome__main">
+
+
+        <p>Issue: Memory use increases and persists after adding to Table, Range or Excel.Setting from Excel Content
+            Add-in.
+        </p>
+        <p>Add Items with the Add-in while watching the Excel Memory level in Task Manager.</p>
+
+        <table>
+            <tr>
+                <td>
+                    <div role="button" id="addTableItem"
+                        class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20">
+                        <span class="ms-Button-label">Add Table Item</span>
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
+                    </div>
+
+
+                </td>
+                <td>
+                    <div role="button" id="addRangeItem"
+                        class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20">
+                        <span class="ms-Button-label">Add Range Item</span>
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <label for="chkAddToSetting">
+            Save JSON Data with Excel.Settings
+            <input type="checkbox" id="chkAddToSetting" name="chkAddToSetting">
+        </label>
+
+
+        <br />
+
+        <table>
+            <tr>
+                <td>
+                    <div role="button" id="loadTableData"
+                        class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20">
+                        <span class="ms-Button-label">Load Table Data</span>
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
+                    </div>
+
+                </td>
+                <td>
+                    <div role="button" id="loadRangeData"
+                        class="ms-welcome__action ms-Button ms-Button--hero ms-u-slideUpIn20">
+                        <span class="ms-Button-label">Load Range Data</span>
+                        <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--ChevronRight"></i></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <textarea id="dataString" style="width:100%;" rows="7"></textarea>
+    </main>
+</body>
+
+</html>
